@@ -25,7 +25,9 @@ class App extends Component {
               return {
                 name: {firstName: "Christine", lastName: "Carpenter"}
               }
-            }, () => {});
+            }, () => {
+              console.log(this.state)
+            });
           }}> 
             Change Name
           </button>
