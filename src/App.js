@@ -8,7 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      name: 'Kitty'
+      name: 'Kitty',
     }
   }
   render() {
@@ -19,7 +19,9 @@ class App extends Component {
           <p>
             Hi {this.state.name}
           </p>
-          <button> 
+          <button onClick={() => {
+            this.setState({name: 'Christine'});
+          }}> 
             Change Name
           </button>
         </header>
