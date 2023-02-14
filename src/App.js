@@ -11,6 +11,14 @@ class App extends Component {
       monsters: [],
     }
   }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users').then((response) => 
+      {
+        console.log(response)
+      }
+    );
+  }
   render() {
     return (
       <div className="App">
