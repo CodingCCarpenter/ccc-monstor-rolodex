@@ -7,7 +7,16 @@ import './App.css';
 
 const App = () => {
   return(
-    
+    <div className="App">
+      <h1 className="app-title">Monstor's Rolodex</h1>
+      <SearchBox 
+        className = 'search-box'
+        monsters={monsters} 
+        onChangeHandler={onSearchChange}
+        placeholder='search monsters'
+      />
+      <CardList monsters={filteredMonsters}/>
+  </div>
   )
 }
 
