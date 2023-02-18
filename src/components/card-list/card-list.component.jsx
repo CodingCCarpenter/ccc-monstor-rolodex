@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import React from 'react';
 
 import './card-list.style.css';
