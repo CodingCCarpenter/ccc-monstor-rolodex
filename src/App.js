@@ -5,6 +5,12 @@ import SearchBox from './components/search-box/search-box.component';
 
 import './App.css';
 
+const App = () => {
+  return(
+    
+  )
+}
+
 class App extends Component {
   constructor() {
     super();
