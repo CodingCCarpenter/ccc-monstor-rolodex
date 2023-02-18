@@ -8,8 +8,9 @@ import './App.css';
 
 const App = () => {
 
-  const [] = useState();
-  
+  const [searchField, setSearchField] = useState('');
+  const [monsters, setMonsters] = useState([]);
+
   const onSearchChange = (event) => {
     const searchField = event.target.value.toLowerCase();
     this.setState(() => {
