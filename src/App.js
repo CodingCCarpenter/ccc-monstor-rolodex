@@ -11,6 +11,10 @@ const App = () => {
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
 
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => response.json())
+    .then((users) => setMonsters(users))
+    
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();
     setSearchField(searchFieldString);
@@ -19,7 +23,7 @@ const App = () => {
   const filteredMonsters = monsters.filter((monster) => {
     return monster.name.toLowerCase().includes(searchField);
   });
-  
+
   return(
     <div className="App">
       <h1 className="app-title">Monstor's Rolodex</h1>
