@@ -9,13 +9,13 @@ const App = () => {
   return(
     <div className="App">
       <h1 className="app-title">Monstor's Rolodex</h1>
-      <SearchBox 
+      {/* <SearchBox 
         className = 'search-box'
         monsters={monsters} 
         onChangeHandler={onSearchChange}
         placeholder='search monsters'
       />
-      <CardList monsters={filteredMonsters}/>
+      <CardList monsters={filteredMonsters}/> */}
   </div>
   )
 }
