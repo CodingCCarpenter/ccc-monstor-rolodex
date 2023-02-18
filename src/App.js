@@ -12,22 +12,24 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
 
   const onSearchChange = (event) => {
-    const searchField = event.target.value.toLowerCase();
-    this.setState(() => {
-      return {searchField}
-    })
+    const searchFieldString = event.target.value.toLowerCase();
+    setSearchField(searchFieldString);
   }
 
+  const filteredMonsters = monsters.filter((monster) => {
+    return monster.name.toLowerCase().includes(searchField);
+  });
+  
   return(
     <div className="App">
       <h1 className="app-title">Monstor's Rolodex</h1>
-      {/* <SearchBox 
+      <SearchBox 
         className = 'search-box'
         monsters={monsters} 
         onChangeHandler={onSearchChange}
         placeholder='search monsters'
       />
-      <CardList monsters={filteredMonsters}/> */}
+      <CardList monsters={filteredMonsters}/> 
   </div>
   )
 }
