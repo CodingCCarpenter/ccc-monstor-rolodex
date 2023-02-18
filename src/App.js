@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 
 import CardList from './components/card-list/card-list.component'
 import SearchBox from './components/search-box/search-box.component';
@@ -7,6 +8,8 @@ import './App.css';
 
 const App = () => {
 
+  const [] = useState();
+  
   const onSearchChange = (event) => {
     const searchField = event.target.value.toLowerCase();
     this.setState(() => {
